@@ -14,7 +14,7 @@ if [ ! -d "$DIR" ]; then
 fi
 
 if [ -f "${LOOKER}" ]; then
-    printf "Memo: "
-    bat "${LOOKER}" && echo
+    bat --decorations never --language markdown $LOOKER
+    echo
 fi
 ls "$DIR"
